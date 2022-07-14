@@ -42,3 +42,13 @@
     border: 2px solid white;
     margin-right: 20px;
   }
+
+  /* img {
+    position: absolute;
+    bottom: 30px;
+  } */
+
+  #socials {
+    position: absolute;
+    bottom: 30px;
+  }
