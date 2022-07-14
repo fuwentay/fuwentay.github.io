@@ -36,3 +36,9 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  #home, #about, #services, #clients, #contact {
+    color: white;
+    border: 2px solid white;
+    margin-right: 20px;
+  }
