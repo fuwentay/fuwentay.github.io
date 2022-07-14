@@ -1,3 +1,36 @@
+* {
+    font-family: Inconsolata;
+    line-height: 1.35;
+}
+
+header {
+    text-align: center;
+    padding-top: 20px;
+    border-bottom: 3px solid #ebebeb;
+}
+
+#mainSection {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* underlining end of paragraph */
+#lineBreak {
+    border-bottom: 2px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+/* hyperlinks */
+#mainSection a {
+    text-decoration: none;
+    color: red;
+}
+
+#mainSection a:hover {
+    box-shadow: 0 0 5px rgb(247, 3, 3);
+    font-weight: bold;
+}
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -37,7 +70,7 @@
     .sidenav a {font-size: 18px;}
   }
 
-  #home, #about, #services, #clients, #contact {
+  #home, #services, #clients, #contact {
     color: white;
     border: 2px solid white;
     margin-right: 20px;
