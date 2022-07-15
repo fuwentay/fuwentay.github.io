@@ -31,6 +31,69 @@ header {
     font-weight: bold;
 }
 
+/* table */
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  padding: 7px;
+  text-align: center;
+}
+
+th {
+  border: 1px solid black;
+  padding: 7px;
+}
+
+/* register button */
+#button {
+  padding: 0px;
+  background-color: green;
+}
+
+#button input {
+  background-color: green;
+  color: white;
+  border: 0px;
+  font-size:medium;
+  cursor:pointer;
+}
+
+#button input:hover {
+  box-shadow: 0 0 5px green;
+  font-weight: bold;
+}
+
+/* request button */
+#reqButton {
+  padding: 0px;
+  background-color: black;
+}
+
+#reqButton input {
+  background-color: black;
+  color: white;
+  border: 0px;
+  font-size:medium;
+  cursor:pointer;
+}
+
+#reqButton input:hover {
+  box-shadow: 0 0 5px green;
+  font-weight: bold;
+}
+
+#fullyBooked {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -75,11 +138,6 @@ header {
     border: 2px solid white;
     margin-right: 20px;
   }
-
-  /* img {
-    position: absolute;
-    bottom: 30px;
-  } */
 
   #socials {
     position: absolute;
