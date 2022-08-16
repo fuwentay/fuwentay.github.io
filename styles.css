@@ -21,12 +21,12 @@ header {
 }
 
 /* hyperlinks */
-#mainSection a {
+#mainSection #link {
     text-decoration: none;
     color: red;
 }
 
-#mainSection a:hover {
+#mainSection #link:hover {
     box-shadow: 0 0 5px rgb(247, 3, 3);
     font-weight: bold;
 }
@@ -105,41 +105,60 @@ th {
     background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
-  }
+}
   
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Style page content */
-  .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
 
-  #pageHighlight {
-    color: white;
-    border: 2px solid white;
-    margin-right: 20px;
-  }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-  #socials {
-    position: absolute;
-    bottom: 30px;
-  }
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#pageHighlight {
+  color: white;
+  border: 2px solid white;
+  margin-right: 20px;
+}
+
+#socials {
+  position: absolute;
+  bottom: 30px;
+}
+
+.hover_img a { 
+  position:relative;
+  text-decoration: none;
+  /* border: 1px solid green; */
+  color: red;
+}
+
+.hover_img a span { 
+  position:absolute; display:none; z-index:99;
+}
+
+.hover_img a:hover span { 
+  display:inline;
+}
+
+img[src*="images/collage.png"] {
+  height: 400px;
+}
