@@ -133,7 +133,7 @@ th {
     .sidenav a {font-size: 18px;}
   }
 
-  #home, #services, #clients, #contact {
+  #pageHighlight {
     color: white;
     border: 2px solid white;
     margin-right: 20px;
