@@ -144,10 +144,9 @@ th {
   bottom: 30px;
 }
 
-.hover_img a { 
+/* .hover_img a { 
   position:relative;
   text-decoration: none;
-  /* border: 1px solid green; */
   color: red;
 }
 
@@ -156,9 +155,28 @@ th {
 }
 
 .hover_img a:hover span { 
-  display:inline;
+  display: inline;
 }
 
 img[src*="images/collage.png"] {
-  height: 400px;
+  height: 300px;
+} */
+
+
+#popupimage {
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+a:hover #popupimage {
+  display: flex
+}
+
+#popuplink {
+  text-decoration: none;
+  color: red;
 }
