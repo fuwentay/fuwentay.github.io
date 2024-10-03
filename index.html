@@ -5,84 +5,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="media/fuwen.png" width="16px" height="16px">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
-    <style>
-        /* Timeline styles */
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .container {
-            display: flex;
-            padding: 20px 0;
-            position: relative;
-        }
-
-        .container.left {
-            flex-direction: row-reverse;
-        }
-
-        .container.right {
-            flex-direction: row;
-        }
-
-        .content {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 45%;
-            position: relative;
-        }
-
-        .content h2 {
-            margin-top: 0;
-        }
-
-        .container::after {
-            content: "";
-            position: absolute;
-            top: 20px;
-            width: 2px;
-            background-color: #ddd;
-            height: calc(100% - 40px);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-
-        .container.left::after {
-            left: 50%;
-        }
-
-        .container.right::after {
-            left: 50%;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .content {
-                width: 90%;
-            }
-
-            .container::after {
-                display: none;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <!-- Side navigation -->
     <div class="sidenav">
         <a id="pageHighlight" href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
         <a href="resume.html">Resume</a>
 
         <!-- Social links-->
@@ -96,77 +25,49 @@
         </div>
     </div>
 
-    <!-- Page content -->
     <div class="main">
         <header>
-            <h1>Hi There!</h1>
+            <h1>Hi there!</h1>
         </header>
         <div id="mainSection">
             <p>
-                <h3>About me</h3>
+                <h2>About me</h2>
             </p>
-            <!-- About me-->
             <p id="lineBreak">
-                I'm Fu Wen, currently studying Engineering Science @ Oxford <br><br>
-                I enjoy learning about financial markets and work on some projects in my free time
+                I'm Fu, currently studying Engineering Science @ Oxford. <br><br>
+                I enjoy reading books about Finance and working on my own personal projects.
             </p>
-            <p>
-                <h3>Experience</h3>
-            </p>
-            <!-- Timeline-->
-            <div class="timeline">
-                <div class="container right">
-                    <div class="content">
-                        <h2>Software Engineering internship at GIC Pte Ltd</h2>
-                        <p>
-                            <i>July 2024 - Sept 2024</i>
-                        </p>
-                        <ul>
-                            <li>Optimized portfolio stress tester and attribution dashboard by profiling runtime and memory usage, switching 
-                                from MSSQL to AWS S3 parquet files for parallel retrieval, and leveraging DuckDB's lazy evaluation for larger datasets, 
-                                reducing memory and computation time.</li>
-                            <li>Added features to enhance data querying and introduced an endpoint for more detailed security return data.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>Quantitative Analyst at CapitOx</h2>
-                        <p>
-                            <i>Jan 2024 - Present</i>
-                        </p>
-                        <ul>
-                            <li>Created an automated trading bot using Alpaca’s API, executing trades based on real-time news events and moving averages.</li>
-                            <li>Logged news and order data in PostgreSQL for analysis and strategy improvement, and backtested the strategy using Backtrader.</li>
-                        </ul>
-                    </div>
-                </div>  
-                <div class="container right">
-                    <div class="content">
-                        <h2>Software Engineering internship at IMDA</h2>
-                        <p>
-                            <i>July 2023 - Sept 2023</i>
-                        </p>
-                        <ul>
-                            <li>Built and deployed an automated web scraping pipeline in Python using Selenium, replicated on AWS Lambda via Dockerfiles.</li>
-                            <li>Set up Workato recipes to trigger Lambda functions, retrieve data from AWS S3, and email the results to users.</li>
-                        </ul>
-                    </div>
-                </div>               
-            </div>
 
-            <!-- Experience-->
             <p>
-                Some other places I've interned at:
-                <ul id="lineBreak">
-                    <li><a id="link" href="https://rotimatic.com/">Rotimatic (Zimplistic PTE LTD)</a>
-                        : Firmware Engineering Intern (Nov 2021 - Jan 2022)</li>
-                    <li><a id="link" href="https://www.a-star.edu.sg/bii">Bioinformatics Institute of A*Star</a>
-                        : Electronics Engineering Intern (Apr 2018 - Dec 2019)</li>
-                    <li><a id="link" href="https://www.dso.org.sg/">DSO National Laboratories</a>
-                        : Student Researcher (Jun 2016 - Jan 2017)</li>
-                </ul>
+                <h2>My journey</h2>
             </p>
+            <p id="lineBreak">
+                Since I was in high school, I have always loved math and physics &mdash; regularly participating in the Olympiads, and any math or 
+                science-related workshops. <br><br>
+
+                Although I already had an interest, participating in the Singapore Young Physicist Tournament was what spurred it further. 
+                It was a scientific debate competition where students had to hypothesise the explanation to a phenomenon, come up with a theoretical 
+                model, and validate it, while fighting off criticism from other teams. Participating in 2 iterations of the competition, I investigated 
+                problems such as the paradoxical sinking motion of bubbles in a column of oscillating fluid, and the motion of a real Newton&apos;s cradle 
+                with Hertzian losses to name a few. <br><br>
+
+                Through this, I developed a deep interest in research and aspired to be an applied researcher at the Agency for Science, Technology and 
+                Research (A*STAR) &mdash; where I ended up interning at for almost 2 years, building a smart mattress to alleviate pressure ulcer formation 
+                (that has been patented under the agency). <br><br>
+
+                However, as I did more hardware and firmware internships, I realised that I preferred to work on software-related projects. Because I found 
+                hardware to have too many degrees of freedom and in turn more room for error, whereas I enjoyed building the logic &mdash; the "brain" of the 
+                system. <br><br>
+
+                Through the Covid-19 pandemic, information regarding investing and trading become more accessible and public as there was an insurgence 
+                of trading gurus and financial advisors online. That was when I created my first expert advisor on MetaTrader4 using moving average crossovers 
+                and the relative strength indicator &mdash; that unfortunately had no alpha. <br><br>
+
+                Since then, I&apos;ve been exploring the world of quantitative finance, trying to seek alpha.
+
+            </p>
+
+            
         </div>
     </div>
 </body>
