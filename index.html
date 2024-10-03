@@ -1,69 +1,173 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Fu Wen | Home</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/png" href="images/fuwen.png" width="16px" height="16px">
-        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
-    </head>
-    <body>
-        <!-- Side navigation -->
-        <div class="sidenav">
-            <a id="pageHighlight" href="index.html">Home</a>
-            <!-- <a href="services.html">Services</a>
-            <a href="clients.html">Clients</a> -->
-            <!-- <a href="contact.html">Contact</a> -->
-            <a href="resume.html">Resume</a>
-            <div id="socials">
-                <a href="https://github.com/fuwentay">
-                    <img alt="github" src="images/github.png" width="40" height="40">
-                </a>                
-                <a href="https://www.linkedin.com/in/fuwentay/">
-                    <img alt="linkedin" src="images/linkedin.png" width="40" height="40">
-                </a>
-            </div>            
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="media/fuwen.png" width="16px" height="16px">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <style>
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .container.left {
+            flex-direction: row-reverse;
+        }
+
+        .container.right {
+            flex-direction: row;
+        }
+
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .container::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            width: 2px;
+            background-color: #ddd;
+            height: calc(100% - 40px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .container.left::after {
+            left: 50%;
+        }
+
+        .container.right::after {
+            left: 50%;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                width: 90%;
+            }
+
+            .container::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a id="pageHighlight" href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+
+        <!-- Social links-->
+        <div id="socials">
+            <a href="https://github.com/fuwentay">
+                <img alt="github" src="media/github.png" width="40" height="40">
+            </a>
+            <a href="https://www.linkedin.com/in/fuwentay/">
+                <img alt="linkedin" src="media/linkedin.png" width="40" height="40">
+            </a>
         </div>
-  
-        <!-- Page content -->
-        <div class="main">
-            <header>
-                <h1>Fu Wen Tay</h1>
-            </header>
-            <div id="mainSection">
-                <p id="lineBreak">
-                    Currently studying Engineering Science @ Oxford
-                </p>
-                <p>
-                    Previously, I have interned at the following places:
-                    <ul id="lineBreak">
-                        <li><a id= "link" href="https://rotimatic.com/">Rotimatic (Zimplistic PTE LTD)</a>
-                            : Firmware Engineering Intern (Nov 2021 - Jan 2022)</li>
-                        <li><a id= "link" href="https://www.a-star.edu.sg/bii">Bioinformatics Institute of A*Star</a>
-                            : Electronics Engineering Intern (Apr 2018 - Dec 2019)</li>
-                        <li><a id= "link" href="https://www.dso.org.sg/">DSO National Laboratories</a>
-                            : Student Researcher (Jun 2016 - Jan 2017)</li>
-                    </ul>
-                </p>
-                <p>
-                    I have the following skills:
-                    <ul id="lineBreak">
-                        <li>Programming Languages: <b>Python, HTML, CSS, SQL</b></li>
-                        <li>Frameworks: <b>Scikit-learn, Django</b></li>
-                        <li>
-                            Others:
-                            <a id="popuplink" href="#">
-                                Arduino
-                                <img id="popupimage" src="images/astar.png">
-                            </a>
-                            <b>, Mathematica, </b>
-                            <a id="popuplink" href="#">
-                                Unit Testing
-                                <img id="popupimage" src="images/zimplistic.png">
-                            </a>                            
-                        </li>                            
-                    </ul>
-                </p>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+        <header>
+            <h1>Hi There!</h1>
+        </header>
+        <div id="mainSection">
+            <p>
+                <h3>About me</h3>
+            </p>
+            <!-- About me-->
+            <p id="lineBreak">
+                I'm Fu Wen, currently studying Engineering Science @ Oxford <br><br>
+                I enjoy learning about financial markets and work on some projects in my free time
+            </p>
+            <p>
+                <h3>Experience</h3>
+            </p>
+            <!-- Timeline-->
+            <div class="timeline">
+                <div class="container right">
+                    <div class="content">
+                        <h2>Software Engineering internship at GIC Pte Ltd</h2>
+                        <p>
+                            <i>July 2024 - Sept 2024</i>
+                        </p>
+                        <ul>
+                            <li>Optimized portfolio stress tester and attribution dashboard by profiling runtime and memory usage, switching 
+                                from MSSQL to AWS S3 parquet files for parallel retrieval, and leveraging DuckDB's lazy evaluation for larger datasets, 
+                                reducing memory and computation time.</li>
+                            <li>Added features to enhance data querying and introduced an endpoint for more detailed security return data.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>Quantitative Analyst at CapitOx</h2>
+                        <p>
+                            <i>Jan 2024 - Present</i>
+                        </p>
+                        <ul>
+                            <li>Created an automated trading bot using Alpaca’s API, executing trades based on real-time news events and moving averages.</li>
+                            <li>Logged news and order data in PostgreSQL for analysis and strategy improvement, and backtested the strategy using Backtrader.</li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="container right">
+                    <div class="content">
+                        <h2>Software Engineering internship at IMDA</h2>
+                        <p>
+                            <i>July 2023 - Sept 2023</i>
+                        </p>
+                        <ul>
+                            <li>Built and deployed an automated web scraping pipeline in Python using Selenium, replicated on AWS Lambda via Dockerfiles.</li>
+                            <li>Set up Workato recipes to trigger Lambda functions, retrieve data from AWS S3, and email the results to users.</li>
+                        </ul>
+                    </div>
+                </div>               
             </div>
+
+            <!-- Experience-->
+            <p>
+                Some other places I've interned at:
+                <ul id="lineBreak">
+                    <li><a id="link" href="https://rotimatic.com/">Rotimatic (Zimplistic PTE LTD)</a>
+                        : Firmware Engineering Intern (Nov 2021 - Jan 2022)</li>
+                    <li><a id="link" href="https://www.a-star.edu.sg/bii">Bioinformatics Institute of A*Star</a>
+                        : Electronics Engineering Intern (Apr 2018 - Dec 2019)</li>
+                    <li><a id="link" href="https://www.dso.org.sg/">DSO National Laboratories</a>
+                        : Student Researcher (Jun 2016 - Jan 2017)</li>
+                </ul>
+            </p>
         </div>
-    </body>
+    </div>
+</body>
 </html>
