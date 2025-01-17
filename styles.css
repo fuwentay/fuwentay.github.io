@@ -92,8 +92,6 @@ th {
   font-weight: bold;
 }
 
-
-
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -133,10 +131,9 @@ th {
   .sidenav a {font-size: 18px;}
 }
 
-#pageHighlight {
+.pageHighlight {
+  background-color: #00bfff;
   color: white;
-  border: 2px solid white;
-  margin-right: 20px;
 }
 
 #socials {
