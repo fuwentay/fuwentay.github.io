@@ -158,3 +158,28 @@ a:hover #popupimage {
   text-decoration: none;
   color: red;
 }
+
+/* video container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-category {
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.category-title {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+}
