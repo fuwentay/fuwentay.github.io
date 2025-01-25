@@ -21,7 +21,7 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", async function() {
             const blogEntries = [
                 'blog_entries/blog-entry1.html',
                 'blog_entries/blog-entry2.html',
@@ -30,15 +30,13 @@
 
             const blogContainer = document.getElementById('blogEntries');
 
-            blogEntries.forEach(entry => {
-                fetch(entry)
-                    .then(response => response.text())
-                    .then(data => {
-                        const entryDiv = document.createElement('div');
-                        entryDiv.innerHTML = data;
-                        blogContainer.appendChild(entryDiv);
-                    });
-            });
+            for (const entry of blogEntries) {
+                const response = await fetch(entry);
+                const data = await response.text();
+                const entryDiv = document.createElement('div');
+                entryDiv.innerHTML = data;
+                blogContainer.appendChild(entryDiv);
+            }
         });
     </script>
 </body>
