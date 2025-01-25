@@ -196,7 +196,8 @@ a:hover #popupimage {
 
 .blog-title {
     color: #005f7f;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 19.92px;
 }
 
 .blog-date {
@@ -221,6 +222,7 @@ a:hover #popupimage {
 
 .video-title {
     color: #005f7f;
+    margin-top: 0px;
     margin-bottom: 10px;
     text-align: center; /* Center-align the text */
 }
@@ -242,12 +244,12 @@ a:hover #popupimage {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 .container {
     display: flex;
-    padding: 20px 0;
+    padding: 0px 0;
     position: relative;
 }
 
@@ -261,9 +263,9 @@ a:hover #popupimage {
 
 .content {
     background-color: #f9f9f9;
-    padding: 10px; /* Reduced padding */
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reused padding from blog and video entries */
+    border-radius: 10px; /* Reused border-radius from blog and video entries */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reused box-shadow from blog and video entries */
     width: 45%;
     position: relative;
 }
