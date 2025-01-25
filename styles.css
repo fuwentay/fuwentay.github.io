@@ -236,3 +236,81 @@ a:hover #popupimage {
 .buffered-section {
     margin-top: 40px; /* Add buffer space from the header */
 }
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container.left {
+    flex-direction: row-reverse;
+}
+
+.container.right {
+    flex-direction: row;
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 10px; /* Reduced padding */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    position: relative;
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #005f7f;
+}
+
+.content p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 2px;
+    background-color: #ddd;
+    height: calc(100% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.container.left::after {
+    left: 50%;
+}
+
+.container.right::after {
+    left: 50%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .container::after {
+        display: none;
+    }
+}
