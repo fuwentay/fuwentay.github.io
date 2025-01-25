@@ -316,3 +316,8 @@ a:hover #popupimage {
         display: none;
     }
 }
+
+/* Custom h2 elements */
+.custom-h2 {
+    color: #005f7f;
+}
