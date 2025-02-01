@@ -321,3 +321,22 @@ a:hover #popupimage {
 .custom-h2 {
     color: #005f7f;
 }
+
+/* Jump to Top button */
+#topButton {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: none; /* Remove background */
+    color: #005f7f; /* Change color to red */
+    cursor: pointer;
+    font-size: 50px; /* Increase font size for better visibility */
+}
+
+#topButton:hover {
+    color: #033242; /* Change color on hover */
+}
