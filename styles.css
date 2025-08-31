@@ -340,3 +340,8 @@ a:hover #popupimage {
 #topButton:hover {
     color: #033242; /* Change color on hover */
 }
+
+/* New CSS class to make text red */
+.red-text {
+    color: red;
+}
