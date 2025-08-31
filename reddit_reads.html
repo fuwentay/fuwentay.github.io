@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reddit Reads</title>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="media/datatrades.png" width="16px" height="16px">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div id="sidebar"></div>
+    <div class="main">
+        <header>
+            <h1>Some Posts I Read</h1>
+        </header>
+        <div id="mainSection" class="buffered-section">
+              <div id="blogEntries"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            const blogEntries = [
+                { file: '/reddit_embed/crypto_whales/reddit_read.html', id: 'crypto-whales' },
+                { file: '/reddit_embed/institutional_desk_ama/reddit_read.html', id: 'trading-gurus' },
+            ];
+
+            const blogContainer = document.getElementById('blogEntries');
+
+            for (const entry of blogEntries) {
+                const response = await fetch(entry.file);
+                const data = await response.text();
+                const entryDiv = document.createElement('div');
+                entryDiv.id = entry.id;
+                entryDiv.innerHTML = data;
+                blogContainer.appendChild(entryDiv);
+            }
+        });
+    </script>
+</body>
+</html>
