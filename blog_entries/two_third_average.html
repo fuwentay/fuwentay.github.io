@@ -1,0 +1,67 @@
+<div class="blog-entry">
+    <h2 class="blog-title">Game Theory: Two-Third Average Problem</h2>
+    <p class="blog-date">Published on: 31st Aug 2025</p>
+    <div class="blog-content">
+        <h3>The Problem</h3>
+        <p>
+            In 1981, Alain Ledoux created the "guess 2/3 of the average" game. 4,000 readers were asked to state an integer between 1 and 1,000,000,000. The winner would be the person whose guess was closest to 2/3 of the average of all guesses. 
+        </p>
+        <p>
+            If everyone were to act rationally like in the Nash equilibrium, everyone would guess 1. In reality, the winner's guess was found to be 22 &mdash; much larger than than 1.
+        </p>
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Guess_2/3_of_the_average#" target="_blank">This game illustrates the difference between the perfect rationality of an actor and the common knowledge of the rationality of all players. To achieve its Nash equilibrium of 1, this game requires all players to be perfectly rational, rationality to be common knowledge, and all players to expect everyone else to behave accordingly. Common knowledge means that every player has the same information, and they also know that everyone else knows that, and that everyone else knows that everyone else knows that, and so on, indefinitely. Common knowledge of rationality of all players is the reason why the winning guess is 1.</a>
+        </p>
+
+        <h3>Modelling it</h3>
+        <p>
+            One way to model this discrepancy is to account for the varying levels of rationality of the players. Essentially, modelling the participants as ordered thinkers &mdash; an adaptation of what Howard Marks described in his book "The Most Important Thing". A 0th-order thinker guesses randomly, a 1st-order thinker guesses what the 0th-order thinker would guess, a 2nd-order thinker guesses what the 1st-order thinker would guess, and so on.
+        </p>
+        <p>
+            The more rational you are, the smaller your answer would be &mdash; eventually converging to zero.
+        </p>
+        <p>
+            Let's enumerate this for an example where the range of guesses is between 0 and 1.
+        </p>
+        <p>
+            <b>Oth</b>: A zeroth-order thinker guesses randomly with an expectation 1/2.
+        </p>
+        <p>
+            <b>1st</b>: A first-order thinker guesses 2/3 of zeroth-order thinkers resulting in 1/3.
+        </p>
+        <p>
+            <b>2nd</b>: A second-order thinker guesses 2/3 of first-order thinkers resulting in 2/9.
+        </p>
+        <p>
+            ...
+        </p>
+        <p>
+            <b>nth</b>: An nth-order thinker guesses 2/3 of (n-1)-th order thinkers resulting in (2/3)^n * (1/2). 
+        </p>
+        <p>
+            If the underlying distribution of the thinkers is uniform, the winning answer would be the average of the guesses made by the differently ordered thinkers. 
+        </p>
+
+        <h3>Will it be Uniform?</h3>
+        <p>
+            Will it be uniform? Highly unlikely, but possible.
+        </p>
+        <p>
+            Something more probable would be a bimodal distribution skewed towards lower orders as most people are not perfectly rational and the highest order because of rational thinkers.
+        </p>
+
+        <h3>Conclusion</h3>
+        <p>
+            Why do we care about the two-third average problem?
+        </p>
+        <p>
+            It is a great illustration of the psychology of decision-making and serves as a parallel to financial markets. In markets, prices are not simply determined by fundamentals but also by participants’ expectations of what others believe the fundamentals are worth. Traders are not only asking “what is this stock worth?” but also “what does everyone else think it’s worth?” and “what do they think others will think it’s worth?”
+        </p>
+        <p>
+            This layered reasoning mirrors the two-thirds problem: being profitable often depends not just on first-order thinking, but on anticipating the second- and third-order thinking of other market participants. Understanding these dynamics can improve trading strategies, especially in areas like momentum trading, bubbles, or news-driven price moves, where psychology and expectations can outweigh fundamentals.
+        </p>
+        <p>
+            The problem reminds us that markets are games of expectations layered upon expectations. Success lies not only in being rational yourself, but in understanding how rational &mdash; or irrational &mdash; everyone else is likely to be.
+        </p>
+    </div>
+</div>
